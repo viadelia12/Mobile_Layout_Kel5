@@ -32,14 +32,14 @@ class _HomePageState extends State<HomePage> {
                   },
                   splashColor: Color(0xffBFACE0),
                   child: Container(
-                    width: 140,
-                    height: 140,
+                    width: 180,
+                    height: 130,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: const <Widget>[
                         Icon(
                           Icons.group,
-                          size: 70,
+                          size: 50,
                           color: Color(0xffA084CA),
                         ),
                         SizedBox(height: 5),
@@ -59,15 +59,15 @@ class _HomePageState extends State<HomePage> {
                   },
                   splashColor: Color(0xffBFACE0),
                   child: Container(
-                    width: 140,
-                    height: 140,
+                    width: 180,
+                    height: 130,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: const <Widget>[
                         Icon(
                           Icons.watch_later_outlined,
-                          size: 70,
+                          size: 50,
                           color: Color(0xffA084CA),
                         ),
                         SizedBox(height: 5),
@@ -87,15 +87,15 @@ class _HomePageState extends State<HomePage> {
                   },
                   splashColor: Color(0xffBFACE0),
                   child: Container(
-                    width: 140,
-                    height: 140,
+                    width: 180,
+                    height: 130,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: const <Widget>[
                         Icon(
                           Icons.thumb_up_alt_rounded,
-                          size: 70,
+                          size: 50,
                           color: Color(0xffA084CA),
                         ),
                         SizedBox(height: 5),
@@ -116,15 +116,15 @@ class _HomePageState extends State<HomePage> {
                   onTap: () {},
                   splashColor: Color(0xffBFACE0),
                   child: Container(
-                    width: 140,
-                    height: 140,
+                    width: 180,
+                    height: 130,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: const <Widget>[
                         Icon(
                           Icons.favorite_outlined,
-                          size: 70,
+                          size: 50,
                           color: Color(0xffA084CA),
                         ),
                         SizedBox(height: 5),

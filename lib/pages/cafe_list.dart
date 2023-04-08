@@ -48,6 +48,7 @@ class _CafeListPageState extends State<CafeListPage> {
                                 fontSize: 18, fontWeight: FontWeight.bold),
                           ),
                           SizedBox(height: 10),
+                          Text(cafe.rangePrices)
                         ],
                       ),
                     ),
