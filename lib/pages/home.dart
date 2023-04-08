@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_layout_kel5/pages/cafe_list.dart';
 import 'package:mobile_layout_kel5/pages/group_profile.dart';
 import 'package:mobile_layout_kel5/pages/stopwatch.dart';
 
@@ -78,7 +79,12 @@ class _HomePageState extends State<HomePage> {
               ),
               Card(
                 child: InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => CafeListPage()));
+                  },
                   splashColor: Color(0xffBFACE0),
                   child: Container(
                     width: 140,
@@ -95,7 +101,7 @@ class _HomePageState extends State<HomePage> {
                         SizedBox(height: 5),
                         Flexible(
                           child: Text(
-                            "Recommendation Books",
+                            "Cafe Recommendation",
                             style: TextStyle(fontSize: 17.0),
                             textAlign: TextAlign.center,
                           ),

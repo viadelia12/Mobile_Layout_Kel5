@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_layout_kel5/pages/home.dart';
+import 'package:mobile_layout_kel5/components/palettes.dart';
 import 'package:mobile_layout_kel5/pages/login.dart';
-import 'package:mobile_layout_kel5/pages/stopwatch.dart';
 import 'package:mobile_layout_kel5/routes/route.dart';
 
 void main() {
@@ -17,10 +16,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        fontFamily: 'Poppins'
-      ),
+      theme:
+          ThemeData(primarySwatch: Palette.mainPurple, fontFamily: 'Poppins'),
       onGenerateRoute: RouteGenerator.generateRoute,
       home: LoginPage(),
     );

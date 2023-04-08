@@ -28,7 +28,7 @@ var listCafe = [
     openHours: "09.00 - 23.30",
   ),
   DataCafe(
-    name: "Cosan (Coffee & Sanctuary)",
+    name: "Cosan Coffee",
     address:
         "Jl. Seturan Raya No.6, Kledokan, Caturtunggal, Kec. Depok, Kabupaten Sleman, DIY",
     addressLink: "https://goo.gl/maps/yf2FEesvQbPbpdBv8",
@@ -100,7 +100,8 @@ var listCafe = [
         "Jl. Laksda Adisucipto No.19, Demangan, Kec. Gondokusuman, Kota Yogyakarta, DIY",
     addressLink: "https://goo.gl/maps/x4WVevRcquUz6RhF9",
     rangePrices: "Rp17.000 - Rp31.000",
-    photo: "https://www.instagram.com/p/CSJHqH4Bki6/",
+    photo:
+        "https://instagram.fjog3-1.fna.fbcdn.net/v/t51.2885-15/228494464_130049915974060_850774464471237129_n.jpg?stp=dst-jpg_e35&_nc_ht=instagram.fjog3-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=cUrL_ggN_acAX8nd-Y4&edm=ABmJApABAAAA&ccb=7-5&ig_cache_key=MjYzMjY2OTEzODE3NDQ5NDkwNg%3D%3D.2-ccb7-5&oh=00_AfAeMfDk3_A9URb0RJ3-YeqGNfxmvK7b_xY9y8vwquUhZg&oe=6435D802&_nc_sid=6136e7",
     openHours: "09.00 - 01.00",
   ),
   DataCafe(

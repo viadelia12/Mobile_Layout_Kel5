@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:mobile_layout_kel5/pages/help.dart';
 import 'package:mobile_layout_kel5/pages/home.dart';
 
@@ -12,12 +11,9 @@ class NavBar extends StatefulWidget {
 
 class _NavBarState extends State<NavBar> {
   int _selectedIndex = 0;
-  List pages = [
-    HomePage(),
-    HelpPage()
-  ];
+  List pages = [HomePage(), HelpPage()];
 
-  void _onItemTapped(int index){
+  void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
@@ -30,14 +26,9 @@ class _NavBarState extends State<NavBar> {
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Color(0xffEBC7E8),
         items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(
-            icon: Icon(Icons.home), 
-            label: 'Home'
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.help_rounded), 
-            label: 'Help'
-          ),
+              icon: Icon(Icons.help_rounded), label: 'Help'),
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Color(0xffA084CA),
