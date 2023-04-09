@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_layout_kel5/components/palettes.dart';
 
 class HelpPage extends StatefulWidget {
   const HelpPage({Key? key}) : super(key: key);
@@ -26,14 +27,18 @@ class _HelpPageState extends State<HelpPage> {
                         onPressed: () {
                           Navigator.pop(context);
                         },
-                        child: const Text('No'),
+                        child: const Text(
+                          'No',
+                          style: TextStyle(color: Colors.red),
+                        ),
                       ),
                       TextButton(
                         onPressed: () {
                           Navigator.of(context).pushNamedAndRemoveUntil(
                               '/login', (Route<dynamic> route) => false);
                         },
-                        child: const Text('Yes'),
+                        child: const Text('Yes',
+                            style: TextStyle(color: Colors.black)),
                       )
                     ],
                   ),
@@ -42,6 +47,7 @@ class _HelpPageState extends State<HelpPage> {
         ],
       ),
       body: SingleChildScrollView(
+        padding: EdgeInsets.all(15),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -116,7 +122,6 @@ class _HelpPageState extends State<HelpPage> {
                       ),
                       textAlign: TextAlign.justify,
                     ),
-
                   ],
                 )),
           ],

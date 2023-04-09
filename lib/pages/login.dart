@@ -37,16 +37,24 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             _usernameField(),
-            SizedBox(height: 10),
+            SizedBox(height: 20),
             _passwordField(),
             SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text(
+                            "Sorry, we're working on getting this fixed ASAP"),
+                        duration: Duration(seconds: 1),
+                      ),
+                    );
+                  },
                   child: Text(
-                    'Forgot Password?',
+                    'Forgot password?',
                     style: TextStyle(
                         color: Color(0xff645CAA),
                         fontSize: 14.0,
@@ -62,23 +70,19 @@ class _LoginPageState extends State<LoginPage> {
                   if (passwordController.text == "user") {
                     Navigator.popAndPushNamed(context, '/navbar');
                   } else {
-                    showDialog(
-                      context: context,
-                      builder: (context) {
-                        return AlertDialog(
-                          content: Text("Password Salah!"),
-                        );
-                      },
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text("Wrong password!"),
+                        duration: Duration(seconds: 1),
+                      ),
                     );
                   }
                 } else {
-                  showDialog(
-                    context: context,
-                    builder: (context) {
-                      return AlertDialog(
-                        content: Text("Email/Password Salah!"),
-                      );
-                    },
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text("Wrong username/password!"),
+                      duration: Duration(seconds: 1),
+                    ),
                   );
                 }
               },
@@ -105,7 +109,15 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text(
+                            "Sorry, we're working on getting this fixed ASAP"),
+                        duration: Duration(seconds: 1),
+                      ),
+                    );
+                  },
                   child: Text(
                     'Register',
                     style: TextStyle(
@@ -127,9 +139,8 @@ class _LoginPageState extends State<LoginPage> {
       controller: usernameController,
       cursorColor: Color(0xff645CAA),
       decoration: InputDecoration(
-        contentPadding: EdgeInsets.all(0.0),
-        labelText: 'Email',
-        hintText: 'Username or e-mail',
+        labelText: 'Username',
+        hintText: 'username',
         labelStyle: TextStyle(
           color: Color(0xff645CAA),
           fontSize: 14.0,
@@ -145,7 +156,7 @@ class _LoginPageState extends State<LoginPage> {
           size: 18,
         ),
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Color(0xffBFACE0), width: 2),
+          borderSide: BorderSide(color: Color(0xffBFACE0), width: 1.5),
           borderRadius: BorderRadius.circular(10.0),
         ),
         floatingLabelStyle: TextStyle(
@@ -166,9 +177,8 @@ class _LoginPageState extends State<LoginPage> {
       controller: passwordController,
       cursorColor: Color(0xff645CAA),
       decoration: InputDecoration(
-        contentPadding: EdgeInsets.all(0.0),
         labelText: 'Password',
-        hintText: 'Password',
+        hintText: 'password',
         labelStyle: TextStyle(
           color: Color(0xff645CAA),
           fontSize: 14.0,
@@ -184,7 +194,7 @@ class _LoginPageState extends State<LoginPage> {
           size: 18,
         ),
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Color(0xffBFACE0), width: 2),
+          borderSide: BorderSide(color: Color(0xffBFACE0), width: 1.5),
           borderRadius: BorderRadius.circular(10.0),
         ),
         floatingLabelStyle: TextStyle(

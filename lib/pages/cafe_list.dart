@@ -10,6 +10,8 @@ class CafeListPage extends StatefulWidget {
 }
 
 class _CafeListPageState extends State<CafeListPage> {
+  bool isFavorite = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +22,8 @@ class _CafeListPageState extends State<CafeListPage> {
       body: ListView.builder(
         itemCount: listCafe.length,
         itemBuilder: (context, index) {
-          final DataCafe cafe = listCafe[index];
+          DataCafe cafe = listCafe[index];
+
           return InkWell(
             onTap: () {
               Navigator.push(
@@ -53,14 +56,31 @@ class _CafeListPageState extends State<CafeListPage> {
                       ),
                     ),
                   ),
-                  Container(
-                    child: IconButton(
-                      onPressed: () {},
-                      icon: Icon(
-                        Icons.favorite_border_outlined,
-                        color: Colors.black,
-                      ),
-                    ),
+                  IconButton(
+                    onPressed: () {
+                      setState(() {
+                        if (listCafe[index].favorite == false) {
+                          listCafe[index].favorite = true;
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text("Added to favorite"),
+                              duration: Duration(seconds: 1),
+                            ),
+                          );
+                        } else {
+                          listCafe[index].favorite = false;
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text("Removed from favorite"),
+                              duration: Duration(seconds: 1),
+                            ),
+                          );
+                        }
+                      });
+                    },
+                    icon: Icon(
+                        cafe.favorite ? Icons.favorite : Icons.favorite_border),
+                    color: cafe.favorite ? Colors.red : Colors.black,
                   ),
                 ],
               ),

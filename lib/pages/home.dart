@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_layout_kel5/pages/cafe_list.dart';
+import 'package:mobile_layout_kel5/pages/favorite_cafe.dart';
 import 'package:mobile_layout_kel5/pages/group_profile.dart';
 import 'package:mobile_layout_kel5/pages/stopwatch.dart';
 
@@ -42,13 +43,14 @@ class _HomePageState extends State<HomePage> {
                           size: 50,
                           color: Color(0xffA084CA),
                         ),
-                        SizedBox(height: 5),
+                        SizedBox(height: 10),
                         Text("Group Profile", style: TextStyle(fontSize: 17.0)),
                       ],
                     ),
                   ),
                 ),
               ),
+              SizedBox(height: 10),
               Card(
                 child: InkWell(
                   onTap: () {
@@ -70,13 +72,14 @@ class _HomePageState extends State<HomePage> {
                           size: 50,
                           color: Color(0xffA084CA),
                         ),
-                        SizedBox(height: 5),
+                        SizedBox(height: 10),
                         Text("Stopwatch", style: TextStyle(fontSize: 17.0)),
                       ],
                     ),
                   ),
                 ),
               ),
+              SizedBox(height: 10),
               Card(
                 child: InkWell(
                   onTap: () {
@@ -98,7 +101,7 @@ class _HomePageState extends State<HomePage> {
                           size: 50,
                           color: Color(0xffA084CA),
                         ),
-                        SizedBox(height: 5),
+                        SizedBox(height: 10),
                         Flexible(
                           child: Text(
                             "Cafe Recommendation",
@@ -111,9 +114,15 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
+              SizedBox(height: 10),
               Card(
                 child: InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => FavoriteCafePage()));
+                  },
                   splashColor: Color(0xffBFACE0),
                   child: Container(
                     width: 180,
@@ -127,7 +136,7 @@ class _HomePageState extends State<HomePage> {
                           size: 50,
                           color: Color(0xffA084CA),
                         ),
-                        SizedBox(height: 5),
+                        SizedBox(height: 10),
                         Text("Favorite", style: TextStyle(fontSize: 17.0)),
                       ],
                     ),
