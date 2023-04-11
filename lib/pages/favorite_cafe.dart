@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_layout_kel5/data/cafe.dart';
-
 import 'cafe_detail.dart';
 
 class FavoriteCafePage extends StatelessWidget {

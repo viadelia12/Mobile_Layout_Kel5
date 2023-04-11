@@ -8,7 +8,6 @@ class StopwatchPage extends StatefulWidget {
 
 class _StopwatchPageState extends State<StopwatchPage> {
   final _stopWatchTimer = StopWatchTimer();
-  bool _isHours = true;
   bool _isRunning = false;
   final _scrollController = ScrollController();
 
@@ -35,8 +34,7 @@ class _StopwatchPageState extends State<StopwatchPage> {
               initialData: _stopWatchTimer.rawTime.value,
               builder: (context, snapshot) {
                 final int? value = snapshot.data;
-                final displayTime =
-                    StopWatchTimer.getDisplayTime(value!, hours: _isHours);
+                final displayTime = StopWatchTimer.getDisplayTime(value!);
                 return Text(
                   displayTime,
                   style: TextStyle(

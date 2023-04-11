@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_layout_kel5/components/palettes.dart';
 
 class HelpPage extends StatefulWidget {
   const HelpPage({Key? key}) : super(key: key);
